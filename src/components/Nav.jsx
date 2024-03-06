@@ -1,6 +1,7 @@
 "use client";
 
 import { signIn, signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -33,7 +34,7 @@ const Nav = () => {
           {status == "unauthenticated" ? (
             ""
           ) : (
-            <img
+            <Image
               width={40}
               height={40}
               src={session?.user?.image}
